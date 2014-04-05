@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Poker App</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="game_start">Start</string>
+    <string name="read_rules">Read Rules</string>
+    <string name="exit">Exit</string>
+    <string name="title_activity_game_interface">GameInterface</string>
+    <string name="title_activity_read_rules">ReadRules</string>
+    <string name="back_to_menu">Back To Menu</string>
+    <string name="dealer_cards">Dealer Cards:\n&#8226;%1$s\n&#8226;%2$s\n&#8226;%3$s\n&#8226;%4$s\n&#8226;%5$s</string>
+    <string name="player_cards">Player #%1$d Cards:\n&#8226;%2$s\n&#8226;%3$s\n\nPlayer Hand:\n%4$s\nStrength:\n%5$d</string>
+    <string name="deal">Deal</string>
+    <string name="winner">Player %1$d wins.</string>
+    <string name="player_card_1">Player Card 1</string>
+    <string name="player_card_2">Plyer Card 2</string>
+    <string name="computer_card_1">Computer Card 1</string>
+    <string name="computer_card_2">Computer Card 2</string>
+    <string name="dealer_card_1">Dealer Card 1</string>
+    <string name="dealer_card_2">Dealer Card 2</string>
+    <string name="dealer_card_3">Dealer Card 3</string>
+    <string name="dealer_card_4">Dealer Card 4</string>
+    <string name="dealer_card_5">Dealer Card 5</string>
+    <string name="play">Play</string>
+    <string name="fold">Fold</string>
+    <string name="player_score">Player Score:\n%1$d</string>
+    <string name="computer_score">Computer Score:\n%1$d</string>
+    <string name="endScore">Playing Until:\n%1$d Points</string>
+
+</resources>
