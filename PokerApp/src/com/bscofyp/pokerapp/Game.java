@@ -7,14 +7,34 @@ public class Game {
 	private int stage = 0;
 	private int[] playerScores;
 
-	Game(int endscore,int players) {
+	Game(int endscore, int players) {
 		playerScores = new int[players];
 		endScore = endscore;
 		round = new Round(players);
 	}
-	public void newRound(){
-		this.round = new Round(playerScores.length);
-		stage = 0;
+
+	public void roundEnd(){
+		Integer[] winners = round.getWinners();
+		if(winners.length>1){
+			for(int i : winners){
+				playerScores[i] += 2;
+			}
+		}
+		else{
+			playerScores[winners[0]] += 5;
+		}
+		for(int i : playerScores){
+			if(i>=endScore)
+				stage = 6;
+			else{
+				this.round = new Round(playerScores.length);
+				stage = 0;
+			}
+		}
+	}
+	
+	public Integer[] roundWinners(){
+		return round.getWinners();
 	}
 
 	public int getEndScore() {
@@ -29,20 +49,23 @@ public class Game {
 		return round.getDealerCards();
 	}
 
-	public String getPlayerStrength(int pl) {
-		return round.getPlayerStrength(pl);
+	public String[] getPlayerStrength() {
+		return round.getPlayerStrength();
 	}
 
 	public int getPlayerVal(int pl) {
 		return round.getPlayerVal(pl);
 	}
-	public int getStage(){
+
+	public int getStage() {
 		return stage;
 	}
-	public void setStage(int numb){
-		stage=numb;
+
+	public void setStage(int numb) {
+		stage = numb;
 	}
-	public int[] getPlayerScores(){
+
+	public int[] getPlayerScores() {
 		return playerScores;
 	}
 }

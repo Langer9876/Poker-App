@@ -2,12 +2,14 @@ package com.bscofyp.pokerapp;
 
 import java.util.Map;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Html;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,9 +18,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class GameInterface extends ActionBarActivity {
-	static GameControl game = new GameControl(new Game(100, 2));
+	static GameControl game = new GameControl(new Game(50, 2));
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +75,9 @@ public class GameInterface extends ActionBarActivity {
 		int stage = game.decision(true);
 		stageFlip(stage);
 		setScreen2(view);
+		if(stage >= 5){
+			roundEnd(view);
+		}
 		return;
 	}
 	//fold button pressed, skip to end of round
@@ -81,8 +87,46 @@ public class GameInterface extends ActionBarActivity {
 		for (int i = pre + 1; i <= stage; i++) {
 			stageFlip(i);
 		}
+		setScreen2(view);
+		roundEnd(view);
 		return;
 	}
+	public void roundEnd(View view){
+		Integer[] winners = game.getRoundWinners();
+		String[] handTitles = game.getHandTitles();
+		if(winners.length>1 && winners[0] == 0){
+			print("Tie round - "+handTitles[0]+" vs "+handTitles[1]+"\n+2pts");
+		}
+		else if(winners[0] == 0){
+			print("You win with "+handTitles[0]+" vs "+handTitles[1]+"\n+5pts");
+		}
+		else{
+			print("You lose with "+handTitles[0]+" vs "+handTitles[1]);
+		}
+		if(game.getStage() == 6){
+			gameEnd();
+		}
+	}
+	public void gameEnd(){
+		int winner = game.gameWinner();
+		if(winner == 0){
+			print("You Win!");
+			this.finish();
+		}
+		else{
+			print("You Lose");
+			this.finish();
+		}
+	}
+	
+	public void print(CharSequence txt){
+		Context context = getApplicationContext();
+		int duration = Toast.LENGTH_SHORT;
+		Toast toast = Toast.makeText(context, txt, duration);
+		toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+		toast.show();
+	}
+	
 	//select front & back of card (2 separate imageview)
 	//hide one while showing second to animate flip effect
 	public void flip(View cardHolder) {

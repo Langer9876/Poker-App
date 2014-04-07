@@ -1042,17 +1042,17 @@ containing a value of this type.
     public static final class id {
         public static final int ImageView01=0x7f050044;
         public static final int ImageView02=0x7f050046;
-        public static final int ImageView03=0x7f050057;
-        public static final int ImageView04=0x7f050059;
-        public static final int ImageView05=0x7f05004b;
-        public static final int ImageView06=0x7f05004d;
-        public static final int ImageView07=0x7f05004f;
-        public static final int ImageView08=0x7f050051;
-        public static final int ImageView09=0x7f050053;
+        public static final int ImageView03=0x7f050055;
+        public static final int ImageView04=0x7f050057;
+        public static final int ImageView05=0x7f050049;
+        public static final int ImageView06=0x7f05004b;
+        public static final int ImageView07=0x7f05004d;
+        public static final int ImageView08=0x7f05004f;
+        public static final int ImageView09=0x7f050051;
         public static final int ImageViewcomputercard1=0x7f050043;
-        public static final int ImageViewdealercard3=0x7f05004e;
-        public static final int ImageViewdealercard4=0x7f050050;
-        public static final int ImageViewdealercard5=0x7f050052;
+        public static final int ImageViewdealercard3=0x7f05004c;
+        public static final int ImageViewdealercard4=0x7f05004e;
+        public static final int ImageViewdealercard5=0x7f050050;
         public static final int action_bar=0x7f05001c;
         public static final int action_bar_activity_content=0x7f050015;
         public static final int action_bar_container=0x7f05001b;
@@ -1071,7 +1071,7 @@ containing a value of this type.
         public static final int button1=0x7f05005c;
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
-        public static final int computer=0x7f05005b;
+        public static final int computer=0x7f050058;
         public static final int container=0x7f05003c;
         public static final int dealerCard1=0x7f05003d;
         public static final int default_activity_button=0x7f050028;
@@ -1080,31 +1080,31 @@ containing a value of this type.
         public static final int dropdown=0x7f05000f;
         public static final int edit_query=0x7f050030;
         public static final int end=0x7f050013;
-        public static final int endScore=0x7f050054;
+        public static final int endScore=0x7f05005a;
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
-        public static final int fold=0x7f050047;
+        public static final int fold=0x7f050053;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
         public static final int icon=0x7f05002a;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
         public static final int imageViewcomputercard2=0x7f050045;
-        public static final int imageViewdealercard1=0x7f05004a;
-        public static final int imageViewdealercard2=0x7f05004c;
-        public static final int imageViewplayercard1=0x7f050056;
-        public static final int imageViewplayercard2=0x7f050058;
+        public static final int imageViewdealercard1=0x7f050048;
+        public static final int imageViewdealercard2=0x7f05004a;
+        public static final int imageViewplayercard1=0x7f050054;
+        public static final int imageViewplayercard2=0x7f050056;
         public static final int linearLayoutComputerCards=0x7f050042;
-        public static final int linearLayoutDealerCards=0x7f050049;
-        public static final int linearLayoutPlayerCards=0x7f050055;
+        public static final int linearLayoutDealerCards=0x7f050047;
+        public static final int linearLayoutPlayerCards=0x7f050052;
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
         public static final int middle=0x7f050012;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
-        public static final int play=0x7f050048;
-        public static final int player1=0x7f05005a;
+        public static final int play=0x7f05005b;
+        public static final int player1=0x7f050059;
         public static final int playerCard1=0x7f05003e;
         public static final int playerCard2=0x7f05003f;
         public static final int progress_circular=0x7f050018;
@@ -1159,6 +1159,7 @@ containing a value of this type.
          showAsAction="ifRoom" items can fit. "always" items can override this. 
          */
         public static final int abc_max_action_buttons=0x7f090000;
+        public static final int ten=0x7f090001;
     }
     public static final class layout {
         public static final int abc_action_bar_decor=0x7f030000;

@@ -123,23 +123,6 @@
         android:text="@string/play"
         android:onClick = "play" />
 
-    <TextView
-        android:id="@+id/player1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayoutPlayerCards"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp"
-        android:text="@string/player_score" />
-
-    <TextView
-        android:id="@+id/computer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayoutComputerCards"
-        android:layout_toRightOf="@+id/endScore"
-        android:text="@string/computer_score" />
-
     <Button
         android:id="@+id/fold"
         style="?android:attr/buttonStyleSmall"
@@ -150,13 +133,37 @@
         android:text="@string/fold" 
         android:onClick="fold"/>
 
+    <TextView
+        android:id="@+id/endScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/linearLayoutComputerCards"
+        android:layout_alignTop="@+id/linearLayoutComputerCards"
+        android:text="@string/endScore" />
+
+    <TextView
+        android:id="@+id/player1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayoutPlayerCards"
+        android:layout_alignLeft="@+id/linearLayoutPlayerCards"
+        android:text="@string/player_score" />
+
+    <TextView
+        android:id="@+id/computer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayoutComputerCards"
+        android:layout_below="@+id/linearLayoutComputerCards"
+        android:text="@string/computer_score" />
+
     <LinearLayout
         android:id="@+id/linearLayoutDealerCards"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/endScore"
         android:layout_below="@+id/computer"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="58dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal" >
 
@@ -260,13 +267,5 @@
                 android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/endScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/play"
-        android:layout_alignTop="@+id/linearLayoutComputerCards"
-        android:text="@string/endScore" />
 
 </RelativeLayout>

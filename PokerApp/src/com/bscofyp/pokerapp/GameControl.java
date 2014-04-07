@@ -13,7 +13,7 @@ public class GameControl {
 		int stage = game.getStage();
 		if(ans){
 			if(stage==5)
-				roundEnd();
+				game.roundEnd();
 			else
 				game.setStage(stage+1);
 		}
@@ -40,14 +40,20 @@ public class GameControl {
 	public int[] getPlayerScores(){
 		return game.getPlayerScores();
 	}
-	public void roundEnd(){
+	public int gameWinner(){
+		int max = 0;
 		int[] scores = game.getPlayerScores();
-		int endScore = game.getEndScore();
-		for(int i : scores){
-			if(i>=endScore)
-				game.setStage(6);
-			else
-				game.newRound();
+		for(int i=0;i<scores.length;i++){
+			max = scores[i]>scores[max]?i:max;
 		}
+		return max;
+	}
+	
+	public Integer[] getRoundWinners(){
+		return game.roundWinners();
+	}
+	
+	public String[] getHandTitles(){
+		return game.getPlayerStrength();
 	}
 }

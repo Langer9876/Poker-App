@@ -25,8 +25,8 @@
     <string name="dealer_card_5">Dealer Card 5</string>
     <string name="play">Play</string>
     <string name="fold">Fold</string>
-    <string name="player_score">Player Score:\n%1$d</string>
-    <string name="computer_score">Computer Score:\n%1$d</string>
-    <string name="endScore">Playing Until:\n%1$d Points</string>
+    <string name="player_score">Player Score: %1$d</string>
+    <string name="computer_score">Computer Score: %1$d</string>
+    <string name="endScore">Playing Until:&lt;br /&gt; %1$d Points</string>
 
 </resources>
