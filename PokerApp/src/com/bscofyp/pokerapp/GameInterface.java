@@ -6,13 +6,10 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBarActivity;
 import android.text.Html;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -20,9 +17,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class GameInterface extends ActionBarActivity {
-	static GameControl game = new GameControl(new Game(50, 2));
-
+public class GameInterface extends CustomMenuActivity {
+	public static GameControl game = new GameControl(new Game(50, 2));
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -31,34 +27,13 @@ public class GameInterface extends ActionBarActivity {
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragment()).commit();
 		}
-
+		
+		setOptions();
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.game_interface, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
-
 	/**
 	 * A placeholder fragment containing a simple view.
 	 */
 	public static class PlaceholderFragment extends Fragment {
-
 		public PlaceholderFragment() {
 		}
 
@@ -203,7 +178,6 @@ public class GameInterface extends ActionBarActivity {
 		((TextView)findViewById(R.id.endScore)).setText(Html.fromHtml(String.format(res.getString(R.string.endScore), endScore)));
 		((TextView)findViewById(R.id.player1)).setText(Html.fromHtml(String.format(res.getString(R.string.player_score), scores[0])));
 		((TextView)findViewById(R.id.computer)).setText(Html.fromHtml(String.format(res.getString(R.string.computer_score), scores[1])));
-
 		populateCards(view, dealer, player, computer);
 	}
 	// populate screen views taking current context as input (at/after creation)
@@ -257,5 +231,4 @@ public class GameInterface extends ActionBarActivity {
 			}
 		}
 	}
-
 }

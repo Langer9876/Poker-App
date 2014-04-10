@@ -4,8 +4,8 @@
     <string name="app_name">Poker App</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="game_start">Start</string>
-    <string name="read_rules">Read Rules</string>
+    <string name="game_start">Start New Game</string>
+    <string name="app_help">Help</string>
     <string name="exit">Exit</string>
     <string name="title_activity_game_interface">GameInterface</string>
     <string name="title_activity_read_rules">ReadRules</string>
@@ -28,5 +28,14 @@
     <string name="player_score">Player Score: %1$d</string>
     <string name="computer_score">Computer Score: %1$d</string>
     <string name="endScore">Playing Until:&lt;br /&gt; %1$d Points</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_helpcategory_list">Help Categories</string>
+    <string name="title_helpcategory_detail">Help Category Detail</string>
+    <string name="show_tips">Show Tips</string>
+    <string name="game_orientation">Orientation Options</string>
+    <string name="orien_lock_port">Lock Portrait Mode</string>
+    <string name="orien_lock_land">Lock Landscape Mode</string>
+    <string name="orien_dynamic">Dynamic Orientation</string>
+    <string name="resume">Resume Previous Game</string>
 
 </resources>

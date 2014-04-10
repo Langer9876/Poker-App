@@ -36,8 +36,24 @@
             android:parentActivityName="com.bscofyp.pokerapp.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.bscofyp.pokerapp.MainActivity" 
-                android:screenOrientation="landscape"/>
+                android:screenOrientation="landscape"
+                android:value="com.bscofyp.pokerapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.bscofyp.pokerapp.Help"
+            android:label="@string/title_activity_help" >
+        </activity>
+        <activity
+            android:name="com.bscofyp.pokerapp.HelpCategoryListActivity"
+            android:label="@string/title_helpcategory_list" >
+        </activity>
+        <activity
+            android:name="com.bscofyp.pokerapp.HelpCategoryDetailActivity"
+            android:label="@string/title_helpcategory_detail"
+            android:parentActivityName="com.bscofyp.pokerapp.HelpCategoryListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bscofyp.pokerapp.HelpCategoryListActivity" />
         </activity>
     </application>
 

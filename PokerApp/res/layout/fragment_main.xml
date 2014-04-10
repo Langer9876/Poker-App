@@ -14,16 +14,24 @@
     tools:context="com.bscofyp.pokerapp.MainActivity$PlaceholderFragment" >
 
         <Button
+            android:id="@+id/resume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="resumeGame"
+            android:text="@string/resume"
+            android:visibility="gone" />
+
+        <Button
             android:id="@+id/play"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="startGame"
+            android:onClick="newGame"
             android:text="@string/game_start" />
 
         <Button
             android:id="@+id/fold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="showRules"
-            android:text="@string/read_rules" />
+            android:onClick="showHelp"
+            android:text="@string/app_help" />
 </LinearLayout>

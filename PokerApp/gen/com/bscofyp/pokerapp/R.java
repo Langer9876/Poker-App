@@ -794,7 +794,8 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f060002;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f070004;
+        public static final int Black=0x7f070004;
+        public static final int abc_search_url_text_holo=0x7f070005;
         public static final int abc_search_url_text_normal=0x7f070000;
         public static final int abc_search_url_text_pressed=0x7f070002;
         public static final int abc_search_url_text_selected=0x7f070001;
@@ -1040,19 +1041,19 @@ containing a value of this type.
         public static final int spades_queen=0x7f02008e;
     }
     public static final class id {
-        public static final int ImageView01=0x7f050044;
-        public static final int ImageView02=0x7f050046;
-        public static final int ImageView03=0x7f050055;
-        public static final int ImageView04=0x7f050057;
-        public static final int ImageView05=0x7f050049;
-        public static final int ImageView06=0x7f05004b;
-        public static final int ImageView07=0x7f05004d;
-        public static final int ImageView08=0x7f05004f;
-        public static final int ImageView09=0x7f050051;
-        public static final int ImageViewcomputercard1=0x7f050043;
-        public static final int ImageViewdealercard3=0x7f05004c;
-        public static final int ImageViewdealercard4=0x7f05004e;
-        public static final int ImageViewdealercard5=0x7f050050;
+        public static final int ImageView01=0x7f050046;
+        public static final int ImageView02=0x7f050048;
+        public static final int ImageView03=0x7f050057;
+        public static final int ImageView04=0x7f050059;
+        public static final int ImageView05=0x7f05004b;
+        public static final int ImageView06=0x7f05004d;
+        public static final int ImageView07=0x7f05004f;
+        public static final int ImageView08=0x7f050051;
+        public static final int ImageView09=0x7f050053;
+        public static final int ImageViewcomputercard1=0x7f050045;
+        public static final int ImageViewdealercard3=0x7f05004e;
+        public static final int ImageViewdealercard4=0x7f050050;
+        public static final int ImageViewdealercard5=0x7f050052;
         public static final int action_bar=0x7f05001c;
         public static final int action_bar_activity_content=0x7f050015;
         public static final int action_bar_container=0x7f05001b;
@@ -1064,53 +1065,61 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f05005d;
+        public static final int action_settings=0x7f050060;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
-        public static final int button1=0x7f05005c;
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
-        public static final int computer=0x7f050058;
+        public static final int computer=0x7f05005a;
         public static final int container=0x7f05003c;
-        public static final int dealerCard1=0x7f05003d;
+        public static final int dealerCard1=0x7f05003f;
         public static final int default_activity_button=0x7f050028;
         public static final int dialog=0x7f05000e;
         public static final int disableHome=0x7f050008;
         public static final int dropdown=0x7f05000f;
         public static final int edit_query=0x7f050030;
         public static final int end=0x7f050013;
-        public static final int endScore=0x7f05005a;
+        public static final int endScore=0x7f05005c;
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
-        public static final int fold=0x7f050053;
+        public static final int fold=0x7f050055;
+        public static final int help=0x7f050061;
+        public static final int helpcategory_detail=0x7f05005e;
+        public static final int helpcategory_detail_container=0x7f05003d;
+        public static final int helpcategory_list=0x7f05003e;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
         public static final int icon=0x7f05002a;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
-        public static final int imageViewcomputercard2=0x7f050045;
-        public static final int imageViewdealercard1=0x7f050048;
-        public static final int imageViewdealercard2=0x7f05004a;
-        public static final int imageViewplayercard1=0x7f050054;
-        public static final int imageViewplayercard2=0x7f050056;
-        public static final int linearLayoutComputerCards=0x7f050042;
-        public static final int linearLayoutDealerCards=0x7f050047;
-        public static final int linearLayoutPlayerCards=0x7f050052;
+        public static final int imageViewcomputercard2=0x7f050047;
+        public static final int imageViewdealercard1=0x7f05004a;
+        public static final int imageViewdealercard2=0x7f05004c;
+        public static final int imageViewplayercard1=0x7f050056;
+        public static final int imageViewplayercard2=0x7f050058;
+        public static final int linearLayoutComputerCards=0x7f050044;
+        public static final int linearLayoutDealerCards=0x7f050049;
+        public static final int linearLayoutPlayerCards=0x7f050054;
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
         public static final int middle=0x7f050012;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
-        public static final int play=0x7f05005b;
-        public static final int player1=0x7f050059;
-        public static final int playerCard1=0x7f05003e;
-        public static final int playerCard2=0x7f05003f;
+        public static final int orien_land=0x7f050065;
+        public static final int orien_normal=0x7f050066;
+        public static final int orien_port=0x7f050064;
+        public static final int orientation=0x7f050063;
+        public static final int play=0x7f05005d;
+        public static final int player1=0x7f05005b;
+        public static final int playerCard1=0x7f050040;
+        public static final int playerCard2=0x7f050041;
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
-        public static final int relativeLayout1=0x7f050041;
+        public static final int relativeLayout1=0x7f050043;
+        public static final int resume=0x7f05005f;
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;
@@ -1128,11 +1137,12 @@ containing a value of this type.
         public static final int split_action_bar=0x7f05001e;
         public static final int submit_area=0x7f050039;
         public static final int tabMode=0x7f050002;
+        public static final int tips=0x7f050062;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
-        public static final int winner=0x7f050040;
+        public static final int winner=0x7f050042;
         public static final int withText=0x7f05000c;
     }
     public static final class integer {
@@ -1186,17 +1196,32 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
         public static final int activity_game_interface=0x7f030017;
-        public static final int activity_main=0x7f030018;
-        public static final int activity_read_rules=0x7f030019;
-        public static final int fragment_game_interface=0x7f03001a;
-        public static final int fragment_main=0x7f03001b;
-        public static final int fragment_read_rules=0x7f03001c;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
+        public static final int activity_helpcategory_detail=0x7f030018;
+        /** 
+    Layout alias to replace the single-pane version of the layout with a
+    two-pane version on Large screens.
+
+    For more on layout aliases, see:
+    http://developer.android.com/training/multiscreen/screensizes.html#TaskUseAliasFilters
+    
+
+    Layout alias to replace the single-pane version of the layout with a
+    two-pane version on Large screens.
+
+    For more on layout aliases, see:
+    http://developer.android.com/training/multiscreen/screensizes.html#TaskUseAliasFilters
+    
+         */
+        public static final int activity_helpcategory_list=0x7f030019;
+        public static final int activity_helpcategory_twopane=0x7f03001a;
+        public static final int activity_main=0x7f03001b;
+        public static final int fragment_game_interface=0x7f03001c;
+        public static final int fragment_helpcategory_detail=0x7f03001d;
+        public static final int fragment_main=0x7f03001e;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001f;
     }
     public static final class menu {
-        public static final int game_interface=0x7f0c0000;
-        public static final int main=0x7f0c0001;
-        public static final int read_rules=0x7f0c0002;
+        public static final int main=0x7f0c0000;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1240,6 +1265,7 @@ containing a value of this type.
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
         public static final int action_settings=0x7f0a000f;
+        public static final int app_help=0x7f0a0011;
         public static final int app_name=0x7f0a000d;
         public static final int back_to_menu=0x7f0a0015;
         public static final int computer_card_1=0x7f0a001c;
@@ -1255,16 +1281,24 @@ containing a value of this type.
         public static final int endScore=0x7f0a0027;
         public static final int exit=0x7f0a0012;
         public static final int fold=0x7f0a0024;
+        public static final int game_orientation=0x7f0a002c;
         public static final int game_start=0x7f0a0010;
         public static final int hello_world=0x7f0a000e;
+        public static final int orien_dynamic=0x7f0a002f;
+        public static final int orien_lock_land=0x7f0a002e;
+        public static final int orien_lock_port=0x7f0a002d;
         public static final int play=0x7f0a0023;
         public static final int player_card_1=0x7f0a001a;
         public static final int player_card_2=0x7f0a001b;
         public static final int player_cards=0x7f0a0017;
         public static final int player_score=0x7f0a0025;
-        public static final int read_rules=0x7f0a0011;
+        public static final int resume=0x7f0a0030;
+        public static final int show_tips=0x7f0a002b;
         public static final int title_activity_game_interface=0x7f0a0013;
+        public static final int title_activity_help=0x7f0a0028;
         public static final int title_activity_read_rules=0x7f0a0014;
+        public static final int title_helpcategory_detail=0x7f0a002a;
+        public static final int title_helpcategory_list=0x7f0a0029;
         public static final int winner=0x7f0a0019;
     }
     public static final class style {
@@ -1291,7 +1325,6 @@ containing a value of this type.
          */
         public static final int AppBaseTheme=0x7f0b0083;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0b0084;
         /**  Mimic text appearance in select_dialog_item.xml 
