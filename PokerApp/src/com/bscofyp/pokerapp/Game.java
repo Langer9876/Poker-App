@@ -24,6 +24,7 @@ public class Game {
 				playerScores[i]+=round.getDecision(0)?2:3;
 		}
 		else{
+			Log.d("MyMessage", winners[0]+"/"+round.getDecision(0));
 			if(winners[0] == 0){
 				playerScores[0]+= round.getDecision(0)?5:0;
 				playerScores[1]+= round.getDecision(0)?0:3;

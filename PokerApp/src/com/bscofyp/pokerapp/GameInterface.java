@@ -62,8 +62,8 @@ public class GameInterface extends CustomMenuActivity {
 		int pre = game.getStage();
 		if(pre == 0 || pre >= 5)
 			return;
-		int stage = game.decision(false);
 		game.playerFold(0);
+		int stage = game.decision(false);
 		for (int i = pre + 1; i <= stage; i++) {
 			stageFlip(i);
 		}
