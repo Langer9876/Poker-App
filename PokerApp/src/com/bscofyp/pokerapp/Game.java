@@ -1,5 +1,7 @@
 package com.bscofyp.pokerapp;
 
+import android.util.Log;
+
 
 public class Game {
 	private int endScore;
@@ -15,14 +17,31 @@ public class Game {
 
 	public void roundEnd(){
 		Integer[] winners = round.getWinners();
+		Log.d("MyMessage",winners[0]+"-"+(winners.length>1?winners[1]:"")+"-"+round.getDecision(0));
 		if(winners.length>1){
-			for(int i : winners){
-				playerScores[i] += 2;
-			}
+			playerScores[0]+=round.getDecision(0)?3:2;
+			for(int i=1;i<playerScores.length;i++)
+				playerScores[i]+=round.getDecision(0)?2:3;
 		}
 		else{
-			playerScores[winners[0]] += 5;
+			if(winners[0] == 0){
+				playerScores[0]+= round.getDecision(0)?5:0;
+				playerScores[1]+= round.getDecision(0)?0:3;
+			}
+			else{
+				playerScores[0]+= round.getDecision(0)?0:3;
+				playerScores[1]+= round.getDecision(0)?5:0;
+			}
 		}
+		stage++;
+	}
+	public void fold(int pl){
+		round.fold(pl);
+	}
+	public boolean getPlayerDecision(int pl){
+		return round.getDecision(pl);
+	}
+	public void newRound(){
 		for(int i : playerScores){
 			if(i>=endScore)
 				stage = 6;

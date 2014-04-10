@@ -1026,19 +1026,20 @@ containing a value of this type.
         public static final int hearts_queen=0x7f02007f;
         public static final int ic_launcher=0x7f020080;
         public static final int main_background=0x7f020081;
-        public static final int spades_10=0x7f020082;
-        public static final int spades_2=0x7f020083;
-        public static final int spades_3=0x7f020084;
-        public static final int spades_4=0x7f020085;
-        public static final int spades_5=0x7f020086;
-        public static final int spades_6=0x7f020087;
-        public static final int spades_7=0x7f020088;
-        public static final int spades_8=0x7f020089;
-        public static final int spades_9=0x7f02008a;
-        public static final int spades_ace=0x7f02008b;
-        public static final int spades_jack=0x7f02008c;
-        public static final int spades_king=0x7f02008d;
-        public static final int spades_queen=0x7f02008e;
+        public static final int pokerhands=0x7f020082;
+        public static final int spades_10=0x7f020083;
+        public static final int spades_2=0x7f020084;
+        public static final int spades_3=0x7f020085;
+        public static final int spades_4=0x7f020086;
+        public static final int spades_5=0x7f020087;
+        public static final int spades_6=0x7f020088;
+        public static final int spades_7=0x7f020089;
+        public static final int spades_8=0x7f02008a;
+        public static final int spades_9=0x7f02008b;
+        public static final int spades_ace=0x7f02008c;
+        public static final int spades_jack=0x7f02008d;
+        public static final int spades_king=0x7f02008e;
+        public static final int spades_queen=0x7f02008f;
     }
     public static final class id {
         public static final int ImageView01=0x7f050046;
@@ -1065,7 +1066,6 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f050060;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
@@ -1084,7 +1084,7 @@ containing a value of this type.
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
         public static final int fold=0x7f050055;
-        public static final int help=0x7f050061;
+        public static final int help=0x7f050060;
         public static final int helpcategory_detail=0x7f05005e;
         public static final int helpcategory_detail_container=0x7f05003d;
         public static final int helpcategory_list=0x7f05003e;
@@ -1107,10 +1107,10 @@ containing a value of this type.
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
-        public static final int orien_land=0x7f050065;
-        public static final int orien_normal=0x7f050066;
-        public static final int orien_port=0x7f050064;
-        public static final int orientation=0x7f050063;
+        public static final int orien_land=0x7f050064;
+        public static final int orien_normal=0x7f050065;
+        public static final int orien_port=0x7f050063;
+        public static final int orientation=0x7f050062;
         public static final int play=0x7f05005d;
         public static final int player1=0x7f05005b;
         public static final int playerCard1=0x7f050040;
@@ -1137,7 +1137,7 @@ containing a value of this type.
         public static final int split_action_bar=0x7f05001e;
         public static final int submit_area=0x7f050039;
         public static final int tabMode=0x7f050002;
-        public static final int tips=0x7f050062;
+        public static final int tips=0x7f050061;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
         public static final int up=0x7f050021;

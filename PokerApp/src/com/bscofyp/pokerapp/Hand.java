@@ -3,12 +3,19 @@ package com.bscofyp.pokerapp;
 public class Hand {
 	private Card[] cards;
 	private int strength;
+	private boolean decision = true;
 
 	Hand(Deck d, int c) {
 		cards = new Card[c];
 		for (int i = 0; i < c; i++) {
 			cards[i] = d.serveCard();
 		}
+	}
+	public void fold(){
+		decision = false;
+	}
+	public boolean getDecision(){
+		return decision;
 	}
 
 	public Card[] getHandCards() {

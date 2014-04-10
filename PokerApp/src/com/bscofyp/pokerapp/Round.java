@@ -16,7 +16,13 @@ public class Round {
 			players[i].setStrength(CardEvaluator.evaluate(players[i].getHandCards(), dealer.getHandCards()));
 		}
 	}
-
+	public void fold(int pl){
+		players[pl].fold();
+	}
+	public boolean getDecision(int pl){
+		return players[pl].getDecision();
+	}
+	
 	public Card[] getPlayerCards(int pl) {
 		return players[pl].getHandCards();
 	}

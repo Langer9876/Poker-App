@@ -25,7 +25,7 @@ public class HelpContent {
 					+ "bet against each other in order to achieve higher gains or bluff the other players into folding out of the "
 					+ "round. In our game however, points are awarded based on the decision of the player, taking into account "
 					+ "whether they continue to play or fold correctly.",
-			handTypesSrc = "",
+			handTypesSrc = "pokerhands",
 			pointDesc = "";
 	public static List<HelpItem> ITEMS = new ArrayList<HelpItem>();
 	public static Map<String, HelpItem> ITEM_MAP = new HashMap<String, HelpItem>();

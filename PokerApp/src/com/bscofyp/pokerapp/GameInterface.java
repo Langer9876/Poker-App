@@ -2,6 +2,7 @@ package com.bscofyp.pokerapp;
 
 import java.util.Map;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -18,7 +19,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class GameInterface extends CustomMenuActivity {
-	public static GameControl game = new GameControl(new Game(50, 2));
+	public static GameControl game = new GameControl();
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -27,7 +29,7 @@ public class GameInterface extends CustomMenuActivity {
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragment()).commit();
 		}
-		
+		game.setGame(new Game(50,2));
 		setOptions();
 	}
 	/**
@@ -58,7 +60,10 @@ public class GameInterface extends CustomMenuActivity {
 	//fold button pressed, skip to end of round
 	public void fold(View view) {
 		int pre = game.getStage();
+		if(pre == 0 || pre >= 5)
+			return;
 		int stage = game.decision(false);
+		game.playerFold(0);
 		for (int i = pre + 1; i <= stage; i++) {
 			stageFlip(i);
 		}
@@ -67,17 +72,14 @@ public class GameInterface extends CustomMenuActivity {
 		return;
 	}
 	public void roundEnd(View view){
-		Integer[] winners = game.getRoundWinners();
-		String[] handTitles = game.getHandTitles();
-		if(winners.length>1 && winners[0] == 0){
-			print("Tie round - "+handTitles[0]+" vs "+handTitles[1]+"\n+2pts");
-		}
-		else if(winners[0] == 0){
-			print("You win with "+handTitles[0]+" vs "+handTitles[1]+"\n+5pts");
-		}
-		else{
-			print("You lose with "+handTitles[0]+" vs "+handTitles[1]);
-		}
+		int[] scores = game.getPlayerScores();
+		int endScore = game.getEndScore();
+		String sysMessage = game.sysMessage();
+		Resources res = getResources();
+		((TextView)findViewById(R.id.endScore)).setText(Html.fromHtml(String.format(res.getString(R.string.endScore), endScore)));
+		((TextView)findViewById(R.id.player1)).setText(Html.fromHtml(String.format(res.getString(R.string.player_score), scores[0])));
+		((TextView)findViewById(R.id.computer)).setText(Html.fromHtml(String.format(res.getString(R.string.computer_score), scores[1])));
+		print(sysMessage);
 		if(game.getStage() == 6){
 			gameEnd();
 		}
@@ -95,11 +97,21 @@ public class GameInterface extends CustomMenuActivity {
 	}
 	
 	public void print(CharSequence txt){
-		Context context = getApplicationContext();
-		int duration = Toast.LENGTH_SHORT;
-		Toast toast = Toast.makeText(context, txt, duration);
-		toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-		toast.show();
+		if(GlobalVars.tips){
+			new AlertDialog.Builder(this)
+		    .setTitle("Tips")
+		    .setMessage(txt)
+		    .setPositiveButton(android.R.string.yes, null)
+		    .setIcon(R.drawable.ic_launcher)
+		     .show();
+		}
+		else{
+			Context context = getApplicationContext();
+			int duration = Toast.LENGTH_SHORT;
+			Toast toast = Toast.makeText(context, txt, duration);
+			toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+			toast.show();
+		}
 	}
 	
 	//select front & back of card (2 separate imageview)
