@@ -13,7 +13,6 @@ public class CustomMenuActivity extends ActionBarActivity{
 		setOptions();
 		super.onResume();
 	}
-	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {  
 		MenuInflater inflater = getMenuInflater();
@@ -44,6 +43,8 @@ public class CustomMenuActivity extends ActionBarActivity{
 			case R.id.orien_normal:
 				setNormal();
 				break;
+			case R.id.mainMenu:
+				this.finish();
 			default:
 				break;
 		}

@@ -37,5 +37,7 @@
     <string name="orien_lock_land">Lock Landscape Mode</string>
     <string name="orien_dynamic">Dynamic Orientation</string>
     <string name="resume">Resume Previous Game</string>
+    <string name="menu">Menu</string>
+    <string name="mainMenu">Return to Main Menu</string>
 
 </resources>

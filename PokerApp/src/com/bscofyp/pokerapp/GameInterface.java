@@ -21,6 +21,7 @@ import android.widget.Toast;
 public class GameInterface extends CustomMenuActivity {
 	public static GameControl game = new GameControl();
 
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

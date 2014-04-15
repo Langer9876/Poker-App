@@ -1084,7 +1084,7 @@ containing a value of this type.
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
         public static final int fold=0x7f050055;
-        public static final int help=0x7f050060;
+        public static final int help=0x7f050061;
         public static final int helpcategory_detail=0x7f05005e;
         public static final int helpcategory_detail_container=0x7f05003d;
         public static final int helpcategory_list=0x7f05003e;
@@ -1103,14 +1103,15 @@ containing a value of this type.
         public static final int linearLayoutPlayerCards=0x7f050054;
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
+        public static final int mainMenu=0x7f050060;
         public static final int middle=0x7f050012;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
-        public static final int orien_land=0x7f050064;
-        public static final int orien_normal=0x7f050065;
-        public static final int orien_port=0x7f050063;
-        public static final int orientation=0x7f050062;
+        public static final int orien_land=0x7f050065;
+        public static final int orien_normal=0x7f050066;
+        public static final int orien_port=0x7f050064;
+        public static final int orientation=0x7f050063;
         public static final int play=0x7f05005d;
         public static final int player1=0x7f05005b;
         public static final int playerCard1=0x7f050040;
@@ -1137,7 +1138,7 @@ containing a value of this type.
         public static final int split_action_bar=0x7f05001e;
         public static final int submit_area=0x7f050039;
         public static final int tabMode=0x7f050002;
-        public static final int tips=0x7f050061;
+        public static final int tips=0x7f050062;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
         public static final int up=0x7f050021;
@@ -1284,6 +1285,8 @@ containing a value of this type.
         public static final int game_orientation=0x7f0a002c;
         public static final int game_start=0x7f0a0010;
         public static final int hello_world=0x7f0a000e;
+        public static final int mainMenu=0x7f0a0032;
+        public static final int menu=0x7f0a0031;
         public static final int orien_dynamic=0x7f0a002f;
         public static final int orien_lock_land=0x7f0a002e;
         public static final int orien_lock_port=0x7f0a002d;
