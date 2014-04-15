@@ -29,7 +29,10 @@ public class GameInterface extends CustomMenuActivity {
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragment()).commit();
 		}
-		game.setGame(new Game(50,2));
+		if(!GlobalVars.gameActive){
+			game.setGame(new Game(50,2));
+			GlobalVars.gameActive = true;
+		}
 		setOptions();
 	}
 	/**
@@ -84,34 +87,42 @@ public class GameInterface extends CustomMenuActivity {
 			gameEnd();
 		}
 	}
+	
+	// TODO Create winner screen
 	public void gameEnd(){
 		int winner = game.gameWinner();
 		if(winner == 0){
-			print("You Win!");
 			this.finish();
+			alert("You Win!");
 		}
 		else{
-			print("You Lose");
 			this.finish();
+			alert("You Lose");
 		}
 	}
 	
 	public void print(CharSequence txt){
 		if(GlobalVars.tips){
-			new AlertDialog.Builder(this)
-		    .setTitle("Tips")
-		    .setMessage(txt)
-		    .setPositiveButton(android.R.string.yes, null)
-		    .setIcon(R.drawable.ic_launcher)
-		     .show();
+			alert(txt);
 		}
 		else{
-			Context context = getApplicationContext();
-			int duration = Toast.LENGTH_SHORT;
-			Toast toast = Toast.makeText(context, txt, duration);
-			toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-			toast.show();
+			toast(txt);
 		}
+	}
+	public void alert(CharSequence txt){
+		new AlertDialog.Builder(this)
+	    .setTitle("Tips")
+	    .setMessage(txt)
+	    .setPositiveButton(android.R.string.yes, null)
+	    .setIcon(R.drawable.ic_launcher)
+	     .show();
+	}
+	public void toast(CharSequence txt){
+		Context context = getApplicationContext();
+		int duration = Toast.LENGTH_SHORT;
+		Toast toast = Toast.makeText(context, txt, duration);
+		toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+		toast.show();
 	}
 	
 	//select front & back of card (2 separate imageview)
@@ -187,6 +198,7 @@ public class GameInterface extends CustomMenuActivity {
 		int[] scores = game.getPlayerScores();
 		int endScore = game.getEndScore();
 		Resources res = getResources();
+		Log.d("Score", endScore+"/"+scores[0]+"/"+scores[1]);
 		((TextView)findViewById(R.id.endScore)).setText(Html.fromHtml(String.format(res.getString(R.string.endScore), endScore)));
 		((TextView)findViewById(R.id.player1)).setText(Html.fromHtml(String.format(res.getString(R.string.player_score), scores[0])));
 		((TextView)findViewById(R.id.computer)).setText(Html.fromHtml(String.format(res.getString(R.string.computer_score), scores[1])));

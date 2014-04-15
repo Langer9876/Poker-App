@@ -44,8 +44,10 @@ public class Game {
 	}
 	public void newRound(){
 		for(int i : playerScores){
-			if(i>=endScore)
+			if(i>=endScore){
 				stage = 6;
+				return;
+			}
 			else{
 				this.round = new Round(playerScores.length);
 				stage = 0;
