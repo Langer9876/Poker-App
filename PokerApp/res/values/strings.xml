@@ -39,5 +39,15 @@
     <string name="resume">Resume Previous Game</string>
     <string name="menu">Menu</string>
     <string name="mainMenu">Return to Main Menu</string>
+    <string name="title_activity_help_overview">HelpOverview</string>
+    <string name="about">About</string>
+    <string name="rules">Rules</string>
+    <string name="poker_hands">Poker Hands</string>
+    <string name="points">Point Scoring</string>
+    <string name="title_activity_help_detail">HelpDetail</string>
+    <string name="back">Back</string>
+    <string name="prev">Prev</string>
+    <string name="next">Next</string>
+    <string name="help_return">Return</string>
 
 </resources>

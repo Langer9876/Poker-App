@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Black"
+    android:orientation="vertical" >
+
+    <TextSwitcher
+        android:id="@+id/textSwitcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout style="?android:attr/buttonBarStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="false"
+        android:orientation="horizontal" >
+
+        <Button style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/buttonPrev"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/prev"
+            android:textColor="@color/White" />
+
+        <Button
+            android:id="@+id/close"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/help_return"
+            android:textColor="@color/White" />
+
+        <Button style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/buttonNext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/next"
+            android:textColor="@color/White" />
+
+    </LinearLayout>
+
+</RelativeLayout>

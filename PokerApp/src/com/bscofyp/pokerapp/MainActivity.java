@@ -79,7 +79,7 @@ public class MainActivity extends CustomMenuActivity {
 	}
 
 	public void showHelp(View view) {
-		Intent intent = new Intent(this, HelpCategoryListActivity.class);
+		Intent intent = new Intent(this, HelpOverview.class);
 		startActivity(intent);
 	}
 }

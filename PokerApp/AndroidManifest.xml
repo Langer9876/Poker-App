@@ -55,6 +55,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.bscofyp.pokerapp.HelpCategoryListActivity" />
         </activity>
+        <activity
+            android:name="com.bscofyp.pokerapp.HelpOverview"
+            android:label="@string/title_activity_help_overview" >
+        </activity>
+        <activity
+            android:name="com.bscofyp.pokerapp.HelpDetail"
+            android:label="@string/title_activity_help_detail" >
+        </activity>
     </application>
 
 </manifest>

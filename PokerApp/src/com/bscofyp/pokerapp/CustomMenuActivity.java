@@ -43,7 +43,7 @@ public class CustomMenuActivity extends ActionBarActivity{
 			case R.id.orien_normal:
 				setNormal();
 				break;
-			case R.id.mainMenu:
+			case R.id.back:
 				this.finish();
 			default:
 				break;
@@ -53,7 +53,7 @@ public class CustomMenuActivity extends ActionBarActivity{
 	}
 
 	private void showHelp(){
-		Intent intent = new Intent(this, HelpCategoryListActivity.class);
+		Intent intent = new Intent(this, HelpOverview.class);
 		startActivity(intent);
 	}
 	private void setLandscape(){
