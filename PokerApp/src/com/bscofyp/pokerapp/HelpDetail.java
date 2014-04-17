@@ -126,7 +126,7 @@ public class HelpDetail extends CustomMenuActivity {
 			}
 		});
 		if (helpNumb != 3) {
-			mSwitcher.setText(Html.fromHtml(currentIndex + 1 + "/" + messageCount + "<br />" + textToShow[0]));
+			mSwitcher.setText(Html.fromHtml(currentIndex + 1 + "/" + messageCount + "<br /><br/>" + textToShow[0]));
 		}
 
 	}

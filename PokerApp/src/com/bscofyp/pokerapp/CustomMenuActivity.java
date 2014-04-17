@@ -8,6 +8,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 public class CustomMenuActivity extends ActionBarActivity{
+	MenuItem tipsCheck;
 	@Override
 	protected void onResume() {
 		setOptions();
@@ -17,11 +18,13 @@ public class CustomMenuActivity extends ActionBarActivity{
 	public boolean onCreateOptionsMenu(Menu menu) {  
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.main, menu);
+		tipsCheck = menu.findItem(R.id.tips);
+		tipsCheck.setChecked(GlobalVars.tips);
 		return true;
 	}
 	@Override
 	public boolean onMenuOpened(int featureId, Menu menu) {
-		menu.findItem(R.id.tips).setChecked(GlobalVars.tips);
+	//tipsCheck.setChecked(GlobalVars.tips);
 		return super.onMenuOpened(featureId, menu);
 	}
 	@Override

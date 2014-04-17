@@ -5,6 +5,7 @@ import java.util.Map;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Html;
@@ -121,9 +122,23 @@ public class GameInterface extends CustomMenuActivity {
 	public void toast(CharSequence txt){
 		Context context = getApplicationContext();
 		int duration = Toast.LENGTH_SHORT;
-		Toast toast = Toast.makeText(context, txt, duration);
+		/*Toast toast = Toast.makeText(context, txt, duration);
 		toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-		toast.show();
+		toast.show();*/
+        Toast toast = Toast.makeText(context,txt, duration);
+        toast.setGravity(Gravity.CENTER, 0,0);
+
+        TextView textView = new TextView(context);
+        textView.setBackgroundColor(Color.DKGRAY);
+        textView.setTextColor(Color.WHITE);
+        textView.setTextSize(30);
+        //Typeface typeface = Typeface.create("serif", Typeface.BOLD);
+        //textView.setTypeface(typeface);
+        textView.setPadding(10, 10, 10, 10);
+        textView.setText(txt);
+
+        toast.setView(textView);
+        toast.show();
 	}
 	
 	//select front & back of card (2 separate imageview)
