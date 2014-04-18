@@ -4,6 +4,7 @@ import java.util.Map;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 
 public class GameInterface extends CustomMenuActivity {
 	public static GameControl game = new GameControl();
+	int playTo;
 
 
 	@Override
@@ -32,7 +34,8 @@ public class GameInterface extends CustomMenuActivity {
 			getSupportFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragment()).commit();
 		}
 		if(!GlobalVars.gameActive){
-			game.setGame(new Game(50,2));
+			playTo = getIntent().getExtras().getInt("playTo", 50);
+			game.setGame(new Game(playTo,2));
 			GlobalVars.gameActive = true;
 		}
 		setOptions();
@@ -84,23 +87,26 @@ public class GameInterface extends CustomMenuActivity {
 		((TextView)findViewById(R.id.endScore)).setText(Html.fromHtml(String.format(res.getString(R.string.endScore), endScore)));
 		((TextView)findViewById(R.id.player1)).setText(Html.fromHtml(String.format(res.getString(R.string.player_score), scores[0])));
 		((TextView)findViewById(R.id.computer)).setText(Html.fromHtml(String.format(res.getString(R.string.computer_score), scores[1])));
-		print(sysMessage);
 		if(game.getStage() == 6){
 			gameEnd();
 		}
+		else
+			print(sysMessage);
 	}
 	
 	// TODO Create winner screen
 	public void gameEnd(){
+		Intent intent = new Intent(this,EndScreen.class);
 		int winner = game.gameWinner();
 		if(winner == 0){
-			this.finish();
-			alert("You Win!");
+			intent.putExtra("result", true);
 		}
 		else{
-			this.finish();
-			alert("You Lose");
+			intent.putExtra("result", false);
 		}
+		GlobalVars.gameActive = false;
+		startActivity(intent);
+		this.finish();
 	}
 	
 	public void print(CharSequence txt){
@@ -131,7 +137,7 @@ public class GameInterface extends CustomMenuActivity {
         TextView textView = new TextView(context);
         textView.setBackgroundColor(Color.DKGRAY);
         textView.setTextColor(Color.WHITE);
-        textView.setTextSize(30);
+        textView.setTextSize(25);
         //Typeface typeface = Typeface.create("serif", Typeface.BOLD);
         //textView.setTypeface(typeface);
         textView.setPadding(10, 10, 10, 10);

@@ -49,5 +49,6 @@
     <string name="prev">Prev</string>
     <string name="next">Next</string>
     <string name="help_return">Return</string>
+    <string name="title_activity_end_screen">EndScreen</string>
 
 </resources>

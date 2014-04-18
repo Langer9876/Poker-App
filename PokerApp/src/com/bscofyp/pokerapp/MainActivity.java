@@ -10,7 +10,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 
 public class MainActivity extends CustomMenuActivity {
 
@@ -57,7 +59,7 @@ public class MainActivity extends CustomMenuActivity {
 		final View v = view;
 		if(GlobalVars.gameActive){
 			new AlertDialog.Builder(this)
-		    .setTitle("Tips")
+		    .setTitle("New Game")
 		    .setMessage("A game already exits. Continue to erase the previous game and start a new one?")
 		    .setPositiveButton(android.R.string.yes,new OnClickListener() {
 				@Override
@@ -74,8 +76,30 @@ public class MainActivity extends CustomMenuActivity {
 			startGame(v);
 	}
 	public void startGame(View view) {
-		Intent intent = new Intent(this, GameInterface.class);
-		startActivity(intent);
+		final Intent intent = new Intent(this, GameInterface.class);
+		if(!GlobalVars.gameActive){
+			final Spinner input = new Spinner(this);
+			Integer[] items = new Integer[]{10,20,30,50,75,100,150,200,250,500};
+			input.setAdapter(new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_dropdown_item, items));
+			input.setSelection(3);
+			new AlertDialog.Builder(this)
+		    .setTitle("New Game")
+		    .setMessage("How many points do you want to play until:")
+		    .setView(input)
+		    .setPositiveButton(android.R.string.yes,new OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					int t = Integer.parseInt(input.getSelectedItem().toString());
+					intent.putExtra("playTo", t);
+					startActivity(intent);
+				}
+			})
+		    .setIcon(R.drawable.ic_launcher)
+		     .show();
+		}
+		else{
+			startActivity(intent);
+		}
 	}
 
 	public void showHelp(View view) {

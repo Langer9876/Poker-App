@@ -35,6 +35,12 @@ public class Game {
 			}
 		}
 		stage++;
+		for(int i : playerScores){
+			if(i>=endScore){
+				stage = 6;
+				return;
+			}
+		}
 	}
 	public void fold(int pl){
 		round.fold(pl);
@@ -43,16 +49,8 @@ public class Game {
 		return round.getDecision(pl);
 	}
 	public void newRound(){
-		for(int i : playerScores){
-			if(i>=endScore){
-				stage = 6;
-				return;
-			}
-			else{
-				this.round = new Round(playerScores.length);
-				stage = 0;
-			}
-		}
+		this.round = new Round(playerScores.length);
+		stage = 0;
 	}
 	
 	public Integer[] roundWinners(){
