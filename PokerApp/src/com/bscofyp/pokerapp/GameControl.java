@@ -56,30 +56,30 @@ public class GameControl {
 		if(game.getPlayerDecision(0)){
 			if(winners.length>1 && winners[0] == 0){
 				return GlobalVars.tips?handTitles[0]+" vs "+handTitles[1]+"\nThe game was a tie, but you continued to play. You gain 3 points, Computer gains 2 points"
-						:("Tie round - "+handTitles[0]+" vs "+handTitles[1]+"\nYou+3pts\nComputer+2pts");
+						:("Tie round - \n"+handTitles[0]+" vs "+handTitles[1]+"\nYou+3pts\nComputer+2pts");
 			}
 			else if(winners[0] == 0){
 				return GlobalVars.tips?handTitles[0]+" vs "+handTitles[1]+"\nYou played the winning hand and won. You gain 5 points"
-						:("You win with "+handTitles[0]+" vs "+handTitles[1]+"\nYou +5pts");
+						:("You win with \n"+handTitles[0]+" vs "+handTitles[1]+"\nYou +5pts");
 			}
 			else{
 				return GlobalVars.tips?handTitles[0]+" vs "+handTitles[1]+"\nYou played the losing hand, and did not fold. Computer gains 5 points"
-						:("You lose with "+handTitles[0]+" vs "+handTitles[1]+"\nComputer +5pts");
+						:("You lose with \n"+handTitles[0]+" vs "+handTitles[1]+"\nComputer +5pts");
 			}
 		}
 		else{
 			if(winners.length>1 && winners[0] == 0){
 				return GlobalVars.tips?handTitles[0]+" vs "+handTitles[1]+"\nIf you had not folded, the game would been a tie. As such, you are awarded 2 points while your "
 						+ "opponent gets 3 points, as it was close. Normally you would lose the round"
-						:("Tie round - "+handTitles[0]+" vs "+handTitles[1]+", but folded\nYou+2pts\nComputer+3pts");
+						:("Tie round - \n"+handTitles[0]+" vs "+handTitles[1]+", but folded\nYou+2pts\nComputer+3pts");
 			}
 			else if(winners[0] == 0){
 				return GlobalVars.tips?handTitles[0]+" vs "+handTitles[1]+"\nYou folded too soon with the winning hand, computer gains 3 points"
-						:("You win with "+handTitles[0]+" vs "+handTitles[1]+", but folded\nComputer+3pts");
+						:("You win with \n"+handTitles[0]+" vs "+handTitles[1]+", but folded\nComputer+3pts");
 			}
 			else{
 				return GlobalVars.tips?handTitles[0]+" vs "+handTitles[1]+"\nIf you had continued to play, you would have lost. You folded correctly and gain 3 points"
-						:("You lose with "+handTitles[0]+" vs "+handTitles[1]+", but folded\nYou+3pts");
+						:("You lose with \n"+handTitles[0]+" vs "+handTitles[1]+", but folded\nYou+3pts");
 			}
 		}
 	}

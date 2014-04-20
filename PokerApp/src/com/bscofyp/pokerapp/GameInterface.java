@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Html;
@@ -22,6 +23,7 @@ import android.widget.Toast;
 
 public class GameInterface extends CustomMenuActivity {
 	public static GameControl game = new GameControl();
+	MediaPlayer mp;
 	int playTo;
 
 
@@ -39,6 +41,7 @@ public class GameInterface extends CustomMenuActivity {
 			GlobalVars.gameActive = true;
 		}
 		setOptions();
+		mp = MediaPlayer.create(this, R.raw.gain);
 	}
 	/**
 	 * A placeholder fragment containing a simple view.
@@ -90,8 +93,9 @@ public class GameInterface extends CustomMenuActivity {
 		if(game.getStage() == 6){
 			gameEnd();
 		}
-		else
+		else{
 			print(sysMessage);
+		}
 	}
 	
 	// TODO Create winner screen
@@ -111,6 +115,7 @@ public class GameInterface extends CustomMenuActivity {
 	
 	public void print(CharSequence txt){
 		if(GlobalVars.tips){
+			mp.start();
 			alert(txt);
 		}
 		else{

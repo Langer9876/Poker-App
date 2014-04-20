@@ -2,10 +2,14 @@ package com.bscofyp.pokerapp;
 
 import android.app.Fragment;
 import android.content.res.Resources;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 
 public class EndScreen extends CustomMenuActivity {
 	static boolean result;
@@ -23,6 +27,8 @@ public class EndScreen extends CustomMenuActivity {
 		pack = getPackageName();
 		result = getIntent().getExtras().getBoolean("result");
 		setOptions();
+		final MediaPlayer mp = result? MediaPlayer.create(this, R.raw.win):MediaPlayer.create(this, R.raw.lose);;
+		mp.start();
 	}
 	/**
 	 * A placeholder fragment containing a simple view.
@@ -35,6 +41,12 @@ public class EndScreen extends CustomMenuActivity {
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.fragment_end_screen, container, false);
+			TextView t = (TextView)rootView.findViewById(R.id.result);
+			if(result)
+				t.setText("You Win.");
+			else
+				t.setText("You Lose.");
+			t.startAnimation((Animation)AnimationUtils.loadAnimation(rootView.getContext(),R.anim.scrolltext));
 			return rootView;
 		}
 	}
