@@ -48,6 +48,9 @@ public class CustomMenuActivity extends ActionBarActivity{
 				break;
 			case R.id.back:
 				this.finish();
+			case R.id.sound:
+				item.setChecked(!item.isChecked());
+				GlobalVars.sound = item.isChecked();
 			default:
 				break;
 		}

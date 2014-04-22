@@ -41,7 +41,8 @@ public class GameInterface extends CustomMenuActivity {
 			GlobalVars.gameActive = true;
 		}
 		setOptions();
-		mp = MediaPlayer.create(this, R.raw.gain);
+		/*mp = MediaPlayer.create(this, R.raw.gain);
+		mp.setVolume((float)0.15, (float)0.15);*/
 	}
 	/**
 	 * A placeholder fragment containing a simple view.
@@ -115,7 +116,8 @@ public class GameInterface extends CustomMenuActivity {
 	
 	public void print(CharSequence txt){
 		if(GlobalVars.tips){
-			mp.start();
+			//if(GlobalVars.sound)
+			//	mp.start();
 			alert(txt);
 		}
 		else{
@@ -133,9 +135,6 @@ public class GameInterface extends CustomMenuActivity {
 	public void toast(CharSequence txt){
 		Context context = getApplicationContext();
 		int duration = Toast.LENGTH_SHORT;
-		/*Toast toast = Toast.makeText(context, txt, duration);
-		toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-		toast.show();*/
         Toast toast = Toast.makeText(context,txt, duration);
         toast.setGravity(Gravity.CENTER, 0,0);
 
@@ -143,8 +142,6 @@ public class GameInterface extends CustomMenuActivity {
         textView.setBackgroundColor(Color.DKGRAY);
         textView.setTextColor(Color.WHITE);
         textView.setTextSize(25);
-        //Typeface typeface = Typeface.create("serif", Typeface.BOLD);
-        //textView.setTypeface(typeface);
         textView.setPadding(10, 10, 10, 10);
         textView.setText(txt);
 

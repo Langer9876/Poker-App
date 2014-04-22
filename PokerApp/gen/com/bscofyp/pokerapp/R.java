@@ -1029,23 +1029,25 @@ containing a value of this type.
         public static final int hearts_queen=0x7f020080;
         public static final int ic_launcher=0x7f020081;
         public static final int info=0x7f020082;
-        public static final int main_background=0x7f020083;
-        public static final int points=0x7f020084;
-        public static final int pokerhands=0x7f020085;
-        public static final int rules=0x7f020086;
-        public static final int spades_10=0x7f020087;
-        public static final int spades_2=0x7f020088;
-        public static final int spades_3=0x7f020089;
-        public static final int spades_4=0x7f02008a;
-        public static final int spades_5=0x7f02008b;
-        public static final int spades_6=0x7f02008c;
-        public static final int spades_7=0x7f02008d;
-        public static final int spades_8=0x7f02008e;
-        public static final int spades_9=0x7f02008f;
-        public static final int spades_ace=0x7f020090;
-        public static final int spades_jack=0x7f020091;
-        public static final int spades_king=0x7f020092;
-        public static final int spades_queen=0x7f020093;
+        public static final int loser=0x7f020083;
+        public static final int main_background=0x7f020084;
+        public static final int points=0x7f020085;
+        public static final int pokerhands=0x7f020086;
+        public static final int rules=0x7f020087;
+        public static final int spades_10=0x7f020088;
+        public static final int spades_2=0x7f020089;
+        public static final int spades_3=0x7f02008a;
+        public static final int spades_4=0x7f02008b;
+        public static final int spades_5=0x7f02008c;
+        public static final int spades_6=0x7f02008d;
+        public static final int spades_7=0x7f02008e;
+        public static final int spades_8=0x7f02008f;
+        public static final int spades_9=0x7f020090;
+        public static final int spades_ace=0x7f020091;
+        public static final int spades_jack=0x7f020092;
+        public static final int spades_king=0x7f020093;
+        public static final int spades_queen=0x7f020094;
+        public static final int winner=0x7f020095;
     }
     public static final class id {
         public static final int ImageView01=0x7f060045;
@@ -1120,10 +1122,10 @@ containing a value of this type.
         public static final int never=0x7f060009;
         public static final int none=0x7f060010;
         public static final int normal=0x7f060000;
-        public static final int orien_land=0x7f060070;
-        public static final int orien_normal=0x7f060071;
-        public static final int orien_port=0x7f06006f;
-        public static final int orientation=0x7f06006e;
+        public static final int orien_land=0x7f060071;
+        public static final int orien_normal=0x7f060072;
+        public static final int orien_port=0x7f060070;
+        public static final int orientation=0x7f06006f;
         public static final int play=0x7f06005c;
         public static final int player1=0x7f06005a;
         public static final int playerCard1=0x7f06003f;
@@ -1148,6 +1150,7 @@ containing a value of this type.
         public static final int showCustom=0x7f060007;
         public static final int showHome=0x7f060004;
         public static final int showTitle=0x7f060006;
+        public static final int sound=0x7f06006e;
         public static final int split_action_bar=0x7f06001e;
         public static final int submit_area=0x7f060039;
         public static final int tabMode=0x7f060002;
@@ -1325,6 +1328,7 @@ containing a value of this type.
         public static final int title_activity_read_rules=0x7f0b0014;
         public static final int title_helpcategory_detail=0x7f0b002a;
         public static final int title_helpcategory_list=0x7f0b0029;
+        public static final int use_sound=0x7f0b003e;
         public static final int winner=0x7f0b0019;
     }
     public static final class style {

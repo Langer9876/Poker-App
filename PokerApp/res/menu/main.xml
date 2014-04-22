@@ -7,13 +7,14 @@
 
     <item android:id="@+id/back" android:title="@string/back"></item><item android:id="@+id/help" android:visible="true" android:title="@string/app_help"></item>
     <item android:id="@+id/tips" android:title="@string/show_tips" android:checkable="true"></item>
-    <item android:id="@+id/orientation" android:title="@string/game_orientation">
+    <item android:id="@+id/sound" android:checkable="true" android:title="@string/use_sound" android:checked="true"></item><item android:id="@+id/orientation" android:title="@string/game_orientation">
         <menu>
             <item android:id="@+id/orien_port" android:title="@string/orien_lock_port"/>
             <item android:id="@+id/orien_land" android:title="@string/orien_lock_land"/>
             <item android:id="@+id/orien_normal" android:title="@string/orien_dynamic"/>
         </menu>
     </item>
+    
     
 
 </menu>
