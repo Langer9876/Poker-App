@@ -23,7 +23,6 @@ import android.widget.Toast;
 
 public class GameInterface extends CustomMenuActivity {
 	public static GameControl game = new GameControl();
-	MediaPlayer mp;
 	int playTo;
 
 
@@ -41,8 +40,6 @@ public class GameInterface extends CustomMenuActivity {
 			GlobalVars.gameActive = true;
 		}
 		setOptions();
-		/*mp = MediaPlayer.create(this, R.raw.gain);
-		mp.setVolume((float)0.15, (float)0.15);*/
 	}
 	/**
 	 * A placeholder fragment containing a simple view.

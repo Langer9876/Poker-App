@@ -28,8 +28,7 @@ public class EndScreen extends CustomMenuActivity {
 		result = getIntent().getExtras().getBoolean("result");
 		setOptions();
 		final MediaPlayer mp = result? MediaPlayer.create(this, R.raw.win):MediaPlayer.create(this, R.raw.lose);;
-		if(GlobalVars.sound)
-			mp.start();
+		mp.start();
 	}
 	/**
 	 * A placeholder fragment containing a simple view.
